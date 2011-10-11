@@ -1,0 +1,88 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="plone">
+
+    <!-- 'Urbanisme Theme' Zope 3 browser layer -->
+    <interface
+        interface=".interfaces.IThemeSpecific"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="Urbanisme Theme"
+        />
+
+    <!-- urbanisme  special view -->
+    <browser:page
+        for="*"
+        name="urbanismeview"
+        class=".urbanismeview.ThemeView"
+        permission="zope.Public"
+        allowed_interface=".interfaces.IThemeView"
+        /> 
+               
+    <!-- URBANISME logo -->
+    <browser:viewlet
+      name="urbanisme.logo"
+      for="*"
+      layer=".interfaces.IThemeSpecific"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      template="templates/logo.pt"
+      class=".urbanismeview.LogoViewlet"
+      permission="zope2.View"
+      />
+
+   <browser:viewlet  
+      name="urbanisme.quicklinks"
+      for="*"
+      layer=".interfaces.IThemeSpecific"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      template="templates/quicklinks.pt"
+      class=".urbanismeview.Quicklinks"
+      permission="zope2.View"
+      />
+
+    <!-- urbanisme searchbox -->
+    <browser:viewlet
+      name="urbanisme.searchbox"
+      for="*"
+      layer=".interfaces.IThemeSpecific"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      template="templates/searchbox.pt"
+      class=".urbanismeview.SearchBoxViewlet"
+      permission="zope2.View" 
+      />
+
+   <!-- urbanisme breadcrumb -->
+   <browser:viewlet
+      name="urbanisme.breadcrumb"
+      for="*"
+      layer=".interfaces.IThemeSpecific"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      template="templates/breadcrumb.pt"
+      class=".urbanismeview.BreadcrumbViewlet"
+      permission="zope2.Public"
+      />
+
+    <!-- urbanisme languageselector -->
+    <browser:viewlet  
+      name="urbanisme.languageselector"
+      for="*"
+      layer=".interfaces.IThemeSpecific"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      template="templates/languageselector.pt"
+      class=".urbanismeview.LanguageSelector"
+      permission="zope2.View"
+      />  
+
+    <!-- urbanisme footer -->
+    <browser:viewlet
+      name="urbanisme.footer"
+      for="*"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      layer=".interfaces.IThemeSpecific"
+      template="templates/footermap.pt"
+      class=".urbanismeview.FooterViewlet"
+      permission="zope2.Public"
+      />
+
+    
+</configure>

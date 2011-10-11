@@ -1,0 +1,368 @@
+
+<div id="portal-footer" metal:define-macro="portal_footer" i18n:domain="plone">
+
+  <div class="colmask">
+    <div class="footerheader">
+      <p class="inspringen" tal:condition="python:request.LANGUAGE=='fr'">plan du site</p>
+      <p class="inspringen" tal:condition="python:request.LANGUAGE=='nl'">sitemap</p>
+    </div>
+    <div class="colmid">
+      <div class="colin">
+        <div class="colwu">
+          <div class="colleft">
+            <div class="col1">
+<div tal:condition="python:request.LANGUAGE=='fr'">
+<div tal:condition="not:exists:python:here.fr.lepermisdurbanisme">
+  <p>&nbsp;</p>
+</div>
+<div tal:condition="exists:python:here.fr.lepermisdurbanisme">
+<div tal:define="object python:here.fr.lepermisdurbanisme">
+	<metal:block tal:define="obj_title python:object.title_or_id();
+							 mappen python:object.getFolderContents(contentFilter = {'portal_type' : ['Folder']});">
+		<tal:block> 
+			<div>
+				<p tal:content="structure obj_title">titel</p>
+				<ul>
+					<tal:block repeat="map mappen">                
+						<li class="bodytt" tal:condition="python: not map.getObject().exclude_from_nav()"><a href="" tal:attributes="href map/getURL;"><tal:block tal:content="map/Title" /></a>
+							<tal:block tal:define="subfolders python:map.getObject().getFolderContents(contentFilter = {'portal_type' : ['Folder', 'Document']});">
+								<ul tal:condition="subfolders">
+									<tal:block repeat="subfolder subfolders">
+										<li tal:condition="python: not subfolder.getObject().exclude_from_nav()">
+											<a href="" tal:attributes="href subfolder/getURL;"><tal:block tal:content="subfolder/Title" /></a>
+										</li>
+									</tal:block>
+								</ul>
+							</tal:block>
+						</li>
+					</tal:block>
+				</ul>
+			</div>
+		</tal:block>
+	</metal:block>
+</div>
+</div>
+</div>
+
+<div tal:condition="python:request.LANGUAGE=='nl'">
+<div tal:condition="not:exists:python:here.nl.vergunning">
+  <p>&nbsp;</p>
+</div>
+<div tal:condition="exists:python:here.nl.vergunning">
+<div tal:define="object python:here.nl.vergunning">
+	<metal:block tal:define="obj_title python:object.title_or_id();
+							 mappen python:object.getFolderContents(contentFilter = {'portal_type' : ['Folder']});">
+		<tal:block> 
+			<div>
+				<p tal:content="structure obj_title">titel</p>
+				<ul>
+					<tal:block repeat="map mappen">                
+						<li class="bodytt" tal:condition="python: not map.getObject().exclude_from_nav()"><a href="" tal:attributes="href map/getURL;"><tal:block tal:content="map/Title" /></a>
+							<tal:block tal:define="subfolders python:map.getObject().getFolderContents(contentFilter = {'portal_type' : ['Folder', 'Document']});">
+								<ul tal:condition="subfolders">
+									<tal:block repeat="subfolder subfolders">
+										<li tal:condition="python: not subfolder.getObject().exclude_from_nav()">
+											<a href="" tal:attributes="href subfolder/getURL;"><tal:block tal:content="subfolder/Title" /></a>
+										</li>
+									</tal:block>
+								</ul>
+							</tal:block>
+						</li>
+					</tal:block>
+				</ul>
+			</div>
+		</tal:block>
+	</metal:block>
+</div>
+</div>
+</div>                     
+
+            </div>
+			
+            <div class="col2">
+<div tal:condition="python:request.LANGUAGE=='fr'">
+<div tal:condition="not:exists:python:here.fr.lesreglesdujeu">
+  <p>&nbsp;</p>
+</div>
+<div tal:condition="exists:python:here.fr.lesreglesdujeu">
+<div tal:define="object python:here.fr.lesreglesdujeu">
+	<metal:block tal:define="obj_title python:object.title_or_id();
+							 mappen python:object.getFolderContents(contentFilter = {'portal_type' : ['Folder']});">
+		<tal:block> 
+			<div>
+				<p tal:content="structure obj_title">titel</p>
+				<ul>
+					<tal:block repeat="map mappen">                
+						<li class="bodytt" tal:condition="python: not map.getObject().exclude_from_nav()"><a href="" tal:attributes="href map/getURL;"><tal:block tal:content="map/Title" /></a>
+							<tal:block tal:define="subfolders python:map.getObject().getFolderContents(contentFilter = {'portal_type' : ['Folder']});">
+								<ul tal:condition="subfolders">
+									<tal:block repeat="subfolder subfolders">
+										<li tal:condition="python: not subfolder.getObject().exclude_from_nav()">
+											<a href="" tal:attributes="href subfolder/getURL;"><tal:block tal:content="subfolder/Title" /></a>
+										</li>
+									</tal:block>
+								</ul>
+							</tal:block>
+						</li>
+					</tal:block>
+				</ul>
+			</div>
+		</tal:block>
+	</metal:block>
+</div>
+</div>
+</div>
+
+<div tal:condition="python:request.LANGUAGE=='nl'">
+<div tal:condition="not:exists:python:here.nl.spelregels">
+  <p>&nbsp;</p>
+</div>
+<div tal:condition="exists:python:here.nl.spelregels">
+<div tal:define="object python:here.nl.spelregels">
+	<metal:block tal:define="obj_title python:object.title_or_id();
+							 mappen python:object.getFolderContents(contentFilter = {'portal_type' : ['Folder']});">
+		<tal:block> 
+			<div>
+				<p tal:content="structure obj_title">titel</p>
+				<ul>
+					<tal:block repeat="map mappen">                
+						<li class="bodytt" tal:condition="python: not map.getObject().exclude_from_nav()"><a href="" tal:attributes="href map/getURL;"><tal:block tal:content="map/Title" /></a>
+							<tal:block tal:define="subfolders python:map.getObject().getFolderContents(contentFilter = {'portal_type' : ['Folder']});">
+								<ul tal:condition="subfolders">
+									<tal:block repeat="subfolder subfolders">
+										<li tal:condition="python: not subfolder.getObject().exclude_from_nav()">
+											<a href="" tal:attributes="href subfolder/getURL;"><tal:block tal:content="subfolder/Title" /></a>
+										</li>
+									</tal:block>
+								</ul>
+							</tal:block>
+						</li>
+					</tal:block>
+				</ul>
+			</div>
+		</tal:block>
+	</metal:block>
+</div>
+</div>
+</div>
+
+            </div>
+			
+			<div class="col3">
+<div tal:condition="python:request.LANGUAGE=='fr'">
+<div tal:condition="not:exists:python:here.fr.quisommesnous">
+  <p>&nbsp;</p>
+</div>
+<div tal:condition="exists:python:here.fr.quisommesnous">
+<div tal:define="object python:here.fr.quisommesnous">
+	<metal:block tal:define="obj_title python:object.title_or_id();
+							 mappen python:object.getFolderContents(contentFilter = {'portal_type' : ['Folder', 'Document']});">
+		<tal:block> 
+			<div>
+				<p tal:content="structure obj_title">titel</p>
+				<ul>
+					<tal:block repeat="map mappen">                
+						<li class="bodytt" tal:condition="python: not map.getObject().exclude_from_nav()"><a href="" tal:attributes="href map/getURL;"><tal:block tal:content="map/Title" /></a>
+							<tal:block tal:define="subfolders python:map.getObject().getFolderContents(contentFilter = {'portal_type' : ['Folder', 'Document']});">
+								<ul tal:condition="subfolders">
+									<tal:block repeat="subfolder subfolders">
+										<li tal:condition="python: not subfolder.getObject().exclude_from_nav()">
+											<a href="" tal:attributes="href subfolder/getURL;"><tal:block tal:content="subfolder/Title" /></a>
+										</li>
+									</tal:block>
+								</ul>
+							</tal:block>
+						</li>
+					</tal:block>
+				</ul>
+			</div>
+		</tal:block>
+	</metal:block>
+</div>
+</div>
+</div>
+
+<div tal:condition="python:request.LANGUAGE=='nl'">
+<div tal:condition="not:exists:python:here.nl.overons">
+  <p>&nbsp;</p>
+</div>
+<div tal:condition="exists:python:here.nl.overons">
+<div tal:define="object python:here.nl.overons">
+	<metal:block tal:define="obj_title python:object.title_or_id();
+							 mappen python:object.getFolderContents(contentFilter = {'portal_type' : ['Folder']});">
+		<tal:block> 
+			<div>
+				<p tal:content="structure obj_title">titel</p>
+				<ul>
+					<tal:block repeat="map mappen">                
+						<li class="bodytt" tal:condition="python: not map.getObject().exclude_from_nav()"><a href="" tal:attributes="href map/getURL;"><tal:block tal:content="map/Title" /></a>
+							<tal:block tal:define="subfolders python:map.getObject().getFolderContents(contentFilter = {'portal_type' : ['Folder', 'Document']});">
+								<ul tal:condition="subfolders">
+									<tal:block repeat="subfolder subfolders">
+										<li tal:condition="python: not subfolder.getObject().exclude_from_nav()">
+											<a href="" tal:attributes="href subfolder/getURL;"><tal:block tal:content="subfolder/Title" /></a>
+										</li>
+									</tal:block>
+								</ul>
+							</tal:block>
+						</li>
+					</tal:block>
+				</ul>
+			</div>
+		</tal:block>
+	</metal:block>
+</div>
+</div>
+</div>
+
+
+			</div>
+			
+            <div class="col4">
+<div tal:condition="python:request.LANGUAGE=='fr'">
+<div tal:condition="not:exists:python:here.fr.cartographie">
+  <p>&nbsp;</p>
+</div>
+<div tal:condition="exists:python:here.fr.cartographie">
+<div tal:define="object python:here.fr.cartographie">
+	<metal:block tal:define="obj_title python:object.title_or_id();
+							 mappen python:object.getFolderContents(contentFilter = {'portal_type' : ['Folder', 'Document']});">
+		<tal:block> 
+			<div>
+				<p tal:content="structure obj_title">titel</p>
+				<ul>
+					<tal:block repeat="map mappen">                
+						<li class="bodytt" tal:condition="python: not map.getObject().exclude_from_nav()"><a href="" tal:attributes="href map/getURL;"><tal:block tal:content="map/Title" /></a>
+							<tal:block tal:define="subfolders python:map.getObject().getFolderContents(contentFilter = {'portal_type' : ['Folder', 'Document']});">
+								<ul tal:condition="subfolders">
+									<tal:block repeat="subfolder subfolders">
+										<li tal:condition="python: not subfolder.getObject().exclude_from_nav()">
+											<a href="" tal:attributes="href subfolder/getURL;"><tal:block tal:content="subfolder/Title" /></a>
+										</li>
+									</tal:block>
+								</ul>
+							</tal:block>
+						</li>
+					</tal:block>
+				</ul>
+			</div>
+		</tal:block>
+	</metal:block>
+</div>
+</div>
+</div>
+
+<div tal:condition="python:request.LANGUAGE=='nl'">
+<div tal:condition="not:exists:python:here.nl.cartografie">
+  <p>&nbsp;</p>
+</div>
+<div tal:condition="exists:python:here.nl.cartografie">
+<div tal:define="object python:here.nl.cartografie">
+	<metal:block tal:define="obj_title python:object.title_or_id();
+							 mappen python:object.getFolderContents(contentFilter = {'portal_type' : ['Folder', 'Document']});">
+		<tal:block> 
+			<div>
+				<p tal:content="structure obj_title">titel</p>
+				<ul>
+					<tal:block repeat="map mappen">                
+						<li class="bodytt" tal:condition="python: not map.getObject().exclude_from_nav()"><a href="" tal:attributes="href map/getURL;"><tal:block tal:content="map/Title" /></a>
+							<tal:block tal:define="subfolders python:map.getObject().getFolderContents(contentFilter = {'portal_type' : ['Folder', 'Document']});">
+								<ul tal:condition="subfolders">
+									<tal:block repeat="subfolder subfolders">
+										<li tal:condition="python: not subfolder.getObject().exclude_from_nav()">
+											<a href="" tal:attributes="href subfolder/getURL;"><tal:block tal:content="subfolder/Title" /></a>
+										</li>
+									</tal:block>
+								</ul>
+							</tal:block>
+						</li>
+					</tal:block>
+				</ul>
+			</div>
+		</tal:block>
+	</metal:block>
+</div>
+</div>
+</div>
+
+            </div>
+			
+			<div class="col5">
+<div tal:condition="python:request.LANGUAGE=='fr'">
+<div tal:condition="not:exists:python:here.fr.publications">
+  <p>&nbsp;</p>
+</div>
+<div tal:condition="exists:python:here.fr.publications">
+<div tal:define="object python:here.fr.publications">
+	<metal:block tal:define="obj_title python:object.title_or_id();
+				 mappen python:object.getFolderContents(contentFilter = {'portal_type' : ['Folder', 'Document']});">
+		<tal:block> 
+			<div>
+				<p tal:content="structure obj_title">titel</p>
+				<ul>
+					<tal:block repeat="map mappen">                
+						<li class="bodytt" tal:condition="python: not map.getObject().exclude_from_nav()"><a href="" tal:attributes="href map/getURL;"><tal:block tal:content="map/Title" /></a>
+							<tal:block tal:define="subfolders python:map.getObject().getFolderContents(contentFilter = {'portal_type' : ['Folder', 'Document']});">
+								<ul tal:condition="subfolders">
+									<tal:block repeat="subfolder subfolders">
+										<li tal:condition="python: not subfolder.getObject().exclude_from_nav()">
+											<a href="" tal:attributes="href subfolder/getURL;"><tal:block tal:content="subfolder/Title" /></a>
+										</li>
+									</tal:block>
+								</ul>
+							</tal:block>
+						</li>
+					</tal:block>
+				</ul>
+			</div>
+		</tal:block>
+	</metal:block>
+</div>
+</div>
+</div>
+
+<div tal:condition="python:request.LANGUAGE=='nl'">
+<div tal:condition="not:exists:python:here.nl.studiesenpublicaties">
+  <p>&nbsp;</p>
+</div>
+<div tal:condition="exists:python:here.nl.studiesenpublicaties">
+<div tal:define="object python:here.nl.studiesenpublicaties">
+	<metal:block tal:define="obj_title python:object.title_or_id();
+				 mappen python:object.getFolderContents(contentFilter = {'portal_type' : ['Folder', 'Document']});">
+		<tal:block> 
+			<div>
+				<p tal:content="structure obj_title">titel</p>
+				<ul>
+					<tal:block repeat="map mappen">                
+						<li class="bodytt" tal:condition="python: not map.getObject().exclude_from_nav()"><a href="" tal:attributes="href map/getURL;"><tal:block tal:content="map/Title" /></a>
+							<tal:block tal:define="subfolders python:map.getObject().getFolderContents(contentFilter = {'portal_type' : ['Folder', 'Document']});">
+								<ul tal:condition="subfolders">
+									<tal:block repeat="subfolder subfolders">
+										<li tal:condition="python: not subfolder.getObject().exclude_from_nav()">
+											<a href="" tal:attributes="href subfolder/getURL;"><tal:block tal:content="subfolder/Title" /></a>
+										</li>
+									</tal:block>
+								</ul>
+							</tal:block>
+						</li>
+					</tal:block>
+				</ul>
+			</div>
+		</tal:block>
+	</metal:block>
+</div>
+</div>
+</div>
+
+
+            </div>
+          </div>
+        </div>
+	  </div>
+    </div>
+    
+    <div class="footerfooter">
+	    &nbsp;
+    </div>
+  </div>
+</div>

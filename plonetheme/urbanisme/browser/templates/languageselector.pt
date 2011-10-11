@@ -1,0 +1,16 @@
+<div id="portal-language" i18n:domain="plone">
+<tal:language tal:define="available view/available; languages view/languages; showFlags view/showFlags;">
+    <ul id="portal-languageselector" tal:condition="python:available and len(languages)>=2">
+        <tal:language repeat="lang languages">
+        <li tal:define="code lang/code; selected lang/selected" tal:attributes="class python: selected and 'currentLanguage' or '';">
+                <a  href="" tal:define="flag lang/flag|nothing; name lang/name;" tal:attributes="href lang/url; title lang/native">
+		
+                    <span tal:condition="python:name == 'Dutch' ">Néderlands</span>
+                    <span tal:condition="python:name == 'French' ">Français</span>
+                    <!--<span tal:condition="python:name == 'English' ">English</span>-->
+                </a>&nbsp;
+		</li>
+        </tal:language>
+    </ul>
+</tal:language>
+</div>
