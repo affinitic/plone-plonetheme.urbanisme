@@ -108,7 +108,7 @@ div#text-60030491d943da910f1ba7aa955a1d09 img.image-left, div#text-2f088da7e1524
 /* ******************************************************************* */
 #portal-columns{
   background: #ffffff;
-  margin-top: 0.9em;
+  margin-top: 0em;
   font-size:150%;
   border-right: 1px solid #C0C0C0\9;
   border-left: 1px solid #C0C0C0\9;
@@ -147,21 +147,19 @@ div#text-60030491d943da910f1ba7aa955a1d09 img.image-left, div#text-2f088da7e1524
 } 
 #portal-logo {
 	margin:1.1em 0 0 3.5em;
-	
+	float: left;
 	
 }
 a#portal-logo { margin:0; }
-#portal-logo img { margin: 0.9em 0.9em -1em 2em; }
+#portal-logo img { margin: 0em 0em 2em 2em; }
 
 #portal-siteactions{
     padding-bottom: 1em;
-    
-    position:relative;
-    top:-149px;
     padding-right:1.8em;
     padding-top:0.5em;
     text-align:right;
     font-size:100%;
+    float: right;
 }
 
 #portal-siteactions li a { 
@@ -208,10 +206,10 @@ div.linkSerchBox a:hover{
 
 #portal-searchbox {
     background-color:#efefef;
-    margin:-22em 2.5em 0 0;
     padding:1.2em 1.2em 1em;
     border:2px solid #eaeaea;
     -moz-border-radius: 4px 4px 4px 4px;
+    margin-right: 20px;
 }
 
 .LSBox input.searchButton {
@@ -248,6 +246,7 @@ div.linkSerchBox a:hover{
     line-height:0.1em; 
     font-size: 70%;
     
+    border-bottom: 4px solid #CC071E;
     
 }
 
@@ -265,11 +264,11 @@ div.linkSerchBox a:hover{
 }
 
 #portal-globalnav li ul ul { 
-    margin:0 0 0 27.4em; 
+    margin:0 0 0 27.4em;
 }
 
 
-#portal-globalnav li a { 
+#portal-globalnav li a {
     font-size:150%;
     border-color: transparent;
     border-style: solid solid solid;
@@ -277,8 +276,8 @@ div.linkSerchBox a:hover{
     color:#000000 !important;
     background:none repeat scroll 0 0 transparent;
     margin-right:0.3em;
-    padding-bottom: 1.6em;
-    padding-top:1.25em;
+    padding: 1.5em 2em 1.5em 2em;
+    min-width: 3em;
 }
 
 #portal-globalnav li a:hover { 
@@ -360,9 +359,6 @@ ul.submenu, ul.navTreeLevel1 {
     margin-left:0em;
     margin-left:0.15em\9;
     font-size:100%;
-    position:relative;
-    top:6.4em;
-    padding-top:0.5em;
     padding-bottom:0.5em;
     padding-left:1.5em;
     padding-right:5em;
@@ -665,7 +661,7 @@ dl.portlet a:hover{
 }
 
 div#content{
- margin-left:-1em;
+ margin-left:1em;
  margin-right:2.5em;
  margin-top:2.2em;
 }
