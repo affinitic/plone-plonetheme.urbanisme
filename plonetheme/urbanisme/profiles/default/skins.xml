@@ -4,9 +4,6 @@
  <object name="urbanisme_images"
     meta_type="Filesystem Directory View"
     directory="plonetheme.urbanisme:skins/urbanisme_images"/>
- <object name="urbanisme_templates"
-    meta_type="Filesystem Directory View"
-    directory="plonetheme.urbanisme:skins/urbanisme_templates"/>
  <object name="urbanisme_styles"
     meta_type="Filesystem Directory View"
     directory="plonetheme.urbanisme:skins/urbanisme_styles"/>
@@ -14,10 +11,8 @@
  <skin-path name="Urbanisme Theme" based-on="Sunburst Theme">
   <layer name="urbanisme_images"
      insert-after="custom"/>
-  <layer name="urbanisme_templates"
-     insert-after="urbanisme_images"/>
   <layer name="urbanisme_styles"
-     insert-after="urbanisme_templates"/>
+     insert-after="urbanisme_images"/>
  </skin-path>
 
 </object>

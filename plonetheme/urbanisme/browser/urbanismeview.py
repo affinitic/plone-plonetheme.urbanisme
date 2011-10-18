@@ -18,11 +18,11 @@ class LogoViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/logo.pt')
     
     def languages(self):
-         """Returns list of languages."""
-         if self.tool is None:
-             return []
-         bound = self.tool.getLanguageBindings()
-         current = bound[0]
+        """Returns list of languages."""
+        if self.tool is None:
+            return []
+        bound = self.tool.getLanguageBindings()
+        current = bound[0]
 
 class LanguageSelector(TranslatableLanguageSelector):
     render = ViewPageTemplateFile('templates/languageselector.pt')
