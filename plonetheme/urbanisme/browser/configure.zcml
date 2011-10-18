@@ -72,17 +72,5 @@
       class=".urbanismeview.LanguageSelector"
       permission="zope2.View"
       />  
-
-    <!-- urbanisme footer -->
-    <browser:viewlet
-      name="urbanisme.footer"
-      for="*"
-      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-      layer=".interfaces.IThemeSpecific"
-      template="templates/footermap.pt"
-      class=".urbanismeview.FooterViewlet"
-      permission="zope2.Public"
-      />
-
     
 </configure>

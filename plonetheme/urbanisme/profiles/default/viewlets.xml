@@ -10,7 +10,6 @@
   </order>
 
   <order manager="plone.portalfooter" skiname="Urbanisme Theme" based-on="Sunburst Theme">
-    <viewlet name="urbanisme.footer" insert-before="*"/>
     <viewlet name="plone.colophon" insert-after="*" />
     
   </order>
@@ -29,9 +28,7 @@
   </hidden>
 
   <hidden manager="plone.portalfooter" skinname="Urbanisme Theme" based-on="Sunburst Theme">
-    <viewlet name="plone.site_actions" />
-    <viewlet name="plone.footer" />
-    
+    <viewlet name="plone.site_actions" />    
   </hidden>
 
 </object>

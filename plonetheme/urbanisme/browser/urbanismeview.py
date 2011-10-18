@@ -36,15 +36,6 @@ class Quicklinks(ViewletBase):
 class SearchBoxViewlet(SearchBoxBase):
     render = ViewPageTemplateFile('templates/searchbox.pt')
 
-class FooterViewlet(ViewletBase):
-    render = ViewPageTemplateFile('templates/footermap.pt')
-
-    def languages(self):
-         """Returns list of languages."""
-         if self.tool is None:
-             return []
-         bound = self.tool.getLanguageBindings()
-         current = bound[0]
 
 class ThemeView(BrowserView):
     implements(IThemeView)
