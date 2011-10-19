@@ -1432,7 +1432,14 @@ dl.portalMessage dd {
    margin-right: 1em;
 }   
 
-/* </dtml-with> */
+
+
+/* Add by bsuttor */
+.footer-column{
+	width:20%;
+	float:left;
+}
+/* End add by bsuttor */
 
 
 
