@@ -661,8 +661,9 @@ dl.portlet a:hover{
 
 div#content{
  margin-left:1em;
- margin-right:2.5em;
+ margin-right:1em;
  margin-top:2.2em;
+ padding:0em;
 }
 
 #portal-column-content div#region-content { width:699px; float:right !important; }
