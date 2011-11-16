@@ -1,14 +1,15 @@
 <div id="portal-siteactions" tal:define="portal_url view/site_url" i18n:domain="plone">
 	<ul>
-		<li tal:condition="python:request.LANGUAGE=='fr'"><a href="" tal:attributes="href string:${view/portal_url}/fr/mots-cles">Mots clés</a></li>
-		<li tal:condition="python:request.LANGUAGE=='nl'"><a href="" tal:attributes="href string:${view/portal_url}/nl/sleutelwoorden">Sleutelwoorden</a></li>
-		<li tal:condition="python:request.LANGUAGE=='fr'"><a href="" tal:attributes="href string:${view/portal_url}/fr/liens-utiles">Liens utiles</a></li>
-		<li tal:condition="python:request.LANGUAGE=='nl'"><a href="" tal:attributes="href string:${view/portal_url}/nl/nuttige-links">Nuttige links</a></li>
-		<li tal:condition="python:request.LANGUAGE=='fr'"><a href="" tal:attributes="href string:${view/portal_url}/fr/sitemap">Plan du site</a></li>
-		<li tal:condition="python:request.LANGUAGE=='nl'"><a href="" tal:attributes="href string:${view/portal_url}/nl/sitemap">Sitemap</a></li>
-		<li tal:condition="python:request.LANGUAGE=='fr'"><a href="" tal:attributes="href string:${view/portal_url}/accessibility-info">Accessibilité Web</a></li>
-		<li tal:condition="python:request.LANGUAGE=='nl'"><a href="" tal:attributes="href string:${view/portal_url}/nl/accessibility-info">Webtoegankelijkheid</a></li>
-               <li tal:condition="python:request.LANGUAGE=='fr'"><a href="" tal:attributes="href string:${view/portal_url}/fr/contact/formulaire-de-contact">Contact</a></li>
-		<li tal:condition="python:request.LANGUAGE=='nl'"><a href="" tal:attributes="href string:${view/portal_url}/nl/contact/contactformulier">Contact</a></li> 
+		<li tal:condition="python:request.LANGUAGE=='fr'"><a href="" tal:attributes="href string:${portal_url}/fr/mots-cles">Mots clés</a></li>
+		<li tal:condition="python:request.LANGUAGE=='nl'"><a href="" tal:attributes="href string:${portal_url}/nl/sleutelwoorden">Sleutelwoorden</a></li>
+		<li tal:condition="python:request.LANGUAGE=='fr'"><a href="" tal:attributes="href string:${portal_url}/fr/liens-utiles">Liens utiles</a></li>
+		<li tal:condition="python:request.LANGUAGE=='nl'"><a href="" tal:attributes="href string:${portal_url}/nl/nuttige-links">Nuttige links</a></li>
+		<li tal:condition="python:request.LANGUAGE=='fr'"><a href="" tal:attributes="href string:${portal_url}/fr/sitemap">Plan du site</a></li>
+		<li tal:condition="python:request.LANGUAGE=='nl'"><a href="" tal:attributes="href string:${portal_url}/nl/sitemap">Sitemap</a></li>
+		<li tal:condition="python:request.LANGUAGE=='fr'"><a href="" tal:attributes="href string:${portal_url}/accessibility-info">Accessibilité Web</a></li>
+		<li tal:condition="python:request.LANGUAGE=='nl'"><a href="" tal:attributes="href string:${portal_url}/nl/accessibility-info">Webtoegankelijkheid</a></li>
+		<li tal:condition="python:request.LANGUAGE=='fr'"><a href="" tal:attributes="href string:${portal_url}/fr/contact/formulaire-de-contact">Contact</a></li>
+		<li tal:condition="python:request.LANGUAGE=='nl'"><a href="" tal:attributes="href string:${portal_url}/nl/contact/contactformulier">Contact</a></li> 
+		<li tal:condition="python:user.getUserName()=='admin'"><a href="" tal:attributes="href string:${portal_url}/plone_control_panel">Control Panel</a></li>
 	</ul>
 </div>
