@@ -9,3 +9,4 @@ def setupVarious(context):
         return
 
     # Add additional setup code here
+    # TODO delete custom folder and customisation_view
