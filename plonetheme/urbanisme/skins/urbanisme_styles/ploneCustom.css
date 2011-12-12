@@ -350,15 +350,14 @@ ul.submenu, ul.navTreeLevel1 {
 #portal-personaltools li a { color:#ffffff; }
 
 #portal-breadcrumbs { 
-    width:92.5%;
-    width:92.3%\9;
+    width:90%;
     background-color: #FFFFFF;
     border-bottom:1px solid #ffffff;
     border-left:1px solid #COCOCO\9; 
     border-right:1px solid #COCOCO\9; 
     margin-left:0em;
     margin-left:0.15em\9;
-    font-size:100%;
+    font-size:95%;
     padding-bottom:0.5em;
     padding-left:1.5em;
     padding-right:5em;

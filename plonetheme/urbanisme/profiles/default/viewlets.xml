@@ -6,7 +6,6 @@
     <viewlet name="urbanisme.searchbox" insert-after="urbanisme.logo" />
     <viewlet name="plone.global_sections" />
     <viewlet name="urbanisme.languageselector" insert-after="*" />
-    <viewlet name="urbanisme.breadcrumb" insert-after="*" />
   </order>
 
   <order manager="plone.portalfooter" skiname="Urbanisme Theme" based-on="Sunburst Theme">
@@ -23,9 +22,6 @@
     <viewlet name="plone.searchbox" />
   </hidden>
 
-  <hidden manager="plone.abovecontent" skinname="Urbanisme Theme" based-on="Sunburst Theme">
-    <viewlet name="plone.path_bar" />
-  </hidden>
 
   <hidden manager="plone.portalfooter" skinname="Urbanisme Theme" based-on="Sunburst Theme">
     <viewlet name="plone.site_actions" />    

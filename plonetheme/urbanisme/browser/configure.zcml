@@ -52,7 +52,7 @@
       />
 
    <!-- urbanisme breadcrumb -->
-   <browser:viewlet
+   <!--browser:viewlet
       name="urbanisme.breadcrumb"
       for="*"
       layer=".interfaces.IThemeSpecific"
@@ -60,7 +60,7 @@
       template="templates/breadcrumb.pt"
       class=".urbanismeview.BreadcrumbViewlet"
       permission="zope2.Public"
-      />
+      /-->
 
     <!-- urbanisme languageselector -->
     <browser:viewlet  
