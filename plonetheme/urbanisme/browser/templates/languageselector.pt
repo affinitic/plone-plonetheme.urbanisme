@@ -5,7 +5,7 @@
         <li tal:define="code lang/code; selected lang/selected" tal:attributes="class python: selected and 'currentLanguage' or '';">
                 <a  href="" tal:define="flag lang/flag|nothing; name lang/name;" tal:attributes="href lang/url; title lang/native">
 		
-                    <span tal:condition="python:name == 'Dutch' ">Néderlands</span>
+                    <span tal:condition="python:name == 'Dutch' ">Nederlands</span>
                     <span tal:condition="python:name == 'French' ">Français</span>
                     <!--<span tal:condition="python:name == 'English' ">English</span>-->
                 </a>&nbsp;
