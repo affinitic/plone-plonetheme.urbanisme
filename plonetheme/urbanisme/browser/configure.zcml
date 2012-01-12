@@ -51,6 +51,16 @@
       permission="zope2.View" 
       />
 
+   <!-- urbanisme breadcrumb -->
+   <browser:viewlet
+      name="plone.path_bar"
+      for="*"
+      layer=".interfaces.IThemeSpecific"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class="plone.app.layout.viewlets.common.PathBarViewlet"
+      permission="zope2.Public"
+      />
+
     <!-- urbanisme languageselector -->
     <browser:viewlet  
       name="urbanisme.languageselector"

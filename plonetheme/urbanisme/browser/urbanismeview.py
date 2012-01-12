@@ -11,6 +11,7 @@ from Products.LinguaPlone.browser.selector import TranslatableLanguageSelector
 from plonetheme.urbanisme.browser.interfaces import IThemeView
 from plone.app.layout.viewlets.common import SearchBoxViewlet as SearchBoxBase
 
+
 _marker = []
 
 class LogoViewlet(ViewletBase):

@@ -109,7 +109,7 @@ div#text-60030491d943da910f1ba7aa955a1d09 img.image-left, div#text-2f088da7e1524
 /* ******************************************************************* */
 #portal-columns{
   background: #ffffff;
-  margin-top: -1.5em;
+  margin-top: -2em;
   font-size:150%;
   border-right: 1px solid #C0C0C0\9;
   border-left: 1px solid #C0C0C0\9;
@@ -371,7 +371,7 @@ ul.submenu, ul.navTreeLevel1 {
 
 #viewlet-above-content{
 /*margin-left:-15em;*/
-
+margin-top:2em;
 }
 
 
@@ -385,7 +385,7 @@ ul.submenu, ul.navTreeLevel1 {
     border-right:1px solid #COCOCO\9; */
     margin-left:0em;
     margin-left:0.3em\9;
-    margin-top:-1.1em;
+    margin-top:2em;
     font-size:105%;
     padding-bottom:0.5em;
     padding-left:1.5em;
@@ -444,7 +444,7 @@ ul#portal-languageselector li.language-en { display:none; }
 
 #portal-column-one { 
     width:21.45%;
-    margin-top:1.9em; 
+    margin-top:2em; 
 }
 
 *+html #portal-column-one {
