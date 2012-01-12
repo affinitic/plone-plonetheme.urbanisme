@@ -53,10 +53,11 @@ abbr, acronym, .explain {
     border-bottom: 0px dotted Black;
 }
 
-.pullquote {
+#content .pullquote {
     color:#4C4C4C;
     padding:1em;
     border:1px dashed #CC071E;
+    font-size:100%;
 }
 
 .callout {
@@ -108,11 +109,12 @@ div#text-60030491d943da910f1ba7aa955a1d09 img.image-left, div#text-2f088da7e1524
 /* ******************************************************************* */
 #portal-columns{
   background: #ffffff;
-  margin-top: 0em;
+  margin-top: -1.5em;
   font-size:150%;
   border-right: 1px solid #C0C0C0\9;
   border-left: 1px solid #C0C0C0\9;
-  width:100.05%
+  box-shadow: 0 10px 10px #C0C0C0;
+  width:100%
   
 }
 
@@ -126,10 +128,9 @@ div#text-60030491d943da910f1ba7aa955a1d09 img.image-left, div#text-2f088da7e1524
 /* PORTAL TOP */
 /* ******************************************************************* */
 #portal-top{
- background: #ffffff;
- background: transparant\9;
- margin-left:0.1em\9;
- width:100%\9;
+
+ /*margin-left:0.1em\9;
+ width:100%\9;*/
 }
 
 *+html #portal-top{
@@ -139,14 +140,31 @@ div#text-60030491d943da910f1ba7aa955a1d09 img.image-left, div#text-2f088da7e1524
 
 #portal-header { 
 	background: #ffffff;
-       /* border-top: &px solid #C0C0C0\9; 
+        margin-left:-1em;
+        margin-left:-1em\9;
+        width:102.4%;
+        width:102.3%\9;
+        border-top: &px solid #C0C0C0\9; 
         border-right: 1px solid #C0C0C0\9;
-        border-left: 1px solid #C0C0C0\9;*/   
+        border-left: 1px solid #C0C0C0\9;
         
 	
 } 
+/*hack pour FireFox*/
+
+/*
+@-moz-document url-prefix() {
+*/
+html>/**/body #portal-header, x:-moz-any-link, x:default {
+    margin-left:-0.9em;
+    width:102.3%;
+}
+
 #portal-logo {
+        background: #ffffff;
+        background: transparant\9;
 	margin:0 0 0 3.5em;
+       /*margin:0 0 0 3.5em\9;*/
 	float: left;
 	
 }
@@ -160,6 +178,7 @@ a#portal-logo { margin:0; }
     text-align:right;
     font-size:100%;
     float: right;
+    position: relative;
 }
 
 #portal-siteactions li a { 
@@ -245,9 +264,13 @@ div.linkSerchBox a:hover{
     padding:0 0 0 2em; 
     line-height:0.1em; 
     font-size: 70%;
-    
+    background: url("slider-nav.gif") repeat-x scroll 0 50%; 
     border-bottom: 4px solid #CC071E;
     
+}
+
+*+html #portal-globalnav { 
+    height:40px;
 }
 
 #portal-globalnav ul { 
@@ -346,18 +369,24 @@ ul.submenu, ul.navTreeLevel1 {
 
 /* ******************************************************************* */
 
+#viewlet-above-content{
+/*margin-left:-15em;*/
+
+}
+
 
 #portal-personaltools li a { color:#ffffff; }
 
 #portal-breadcrumbs { 
-    width:90%;
+   
     background-color: #FFFFFF;
-    border-bottom:1px solid #ffffff;
-    border-left:1px solid #COCOCO\9; 
-    border-right:1px solid #COCOCO\9; 
+    border-bottom:1px solid #ffffff;*/
+    /*border-left:1px solid #COCOCO\9; 
+    border-right:1px solid #COCOCO\9; */
     margin-left:0em;
-    margin-left:0.15em\9;
-    font-size:95%;
+    margin-left:0.3em\9;
+    margin-top:-1.1em;
+    font-size:105%;
     padding-bottom:0.5em;
     padding-left:1.5em;
     padding-right:5em;
@@ -366,30 +395,30 @@ ul.submenu, ul.navTreeLevel1 {
 
  /*only  IE7*/
 *+html #portal-breadcrumbs { 
-    top:8.3em;
-    margin-left:0em;
-    width:92.5%;
+   /* margin-top:-1.7em;*/
+    /*width:90.0%;*/
+   
 }
-
 
 
 
 /* LANGUAGE SELECTOR */
 /* ******************************************************************* */
 
+
 #portal-languageselector {
-     background: none repeat scroll 0 0 #ffffff;
-    margin:0 2em 0 1em;
-    font-size:100%;
+     background: none repeat scroll 0 0 transparent;
+    margin:0.5em 2em 0 1em;
+    font-size:105%;
     position:relative;
-    top:1.8em;
+    top:0.5em;
     left:0.50em;
     z-index:2;
 }
 
  /*only  IE7*/
 *+html #portal-languageselector {
-   top:1.2em;
+   top:1.3em;
 
 }
 
@@ -415,16 +444,20 @@ ul#portal-languageselector li.language-en { display:none; }
 
 #portal-column-one { 
     width:21.45%;
-    margin-top:2em; 
+    margin-top:1.9em; 
 }
 
-div.position-0 {
+*+html #portal-column-one {
+    margin-top:-0.8em; 
+}
+
+/*div.position-0 {
     margin-left: -99.975%;
-}
+}*/
 
-div.width-full {
+/*div.width-full {
     width: 100%;
-}
+}*/
  
 #portal-column-one div.visualPadding { padding:2em 0 1em 1em; }
 
@@ -439,6 +472,15 @@ div.bodytt {
 
 
 /* -------------- navigation -------------- */
+.portlet-static-menu-principal ul li{
+    list-style-image: url("http://www.urbanisme.irisnet.be/bullet.gif");
+    margin-left:1em;
+}
+
+.portlet-static-menu-principal ul ul li{
+
+    margin-left:2em;
+}
 
 .portletNavigationTree {
     padding-bottom: 1em;
@@ -659,10 +701,16 @@ dl.portlet a:hover{
 }
 
 div#content{
- margin-left:1em;
+ margin-left:-0.6em;
  margin-right:1em;
- margin-top:2.2em;
+ margin-top:1.9em;
  padding:0em;
+}
+
+*+html div#content{
+    margin-top:-1em;
+    position:relative;
+    z-index:12;
 }
 
 #portal-column-content div#region-content { width:699px; float:right !important; }
@@ -890,7 +938,7 @@ dl.portlet li {
     margin: 0 1em 1em 0;
 }
 
-img.tileImage, img.newsImage {
+#content img.tileImage,#content img.newsImage {
     float: left;
     margin: 0.5em 1em 1em 0;
 }
@@ -1110,16 +1158,31 @@ dl.searchResults dt {
     text-align:left;
     color:#000000;
     font-size:85%;
-     line-height: 2.5em;
+    line-height: 2.5em;
     
 }
 
-
-
-#portal-footer p {
-    border-bottom: 4px solid #cccccc;
-    font-weight:bold;
+*+html #portal-footer {
+    height:110%;
+    margin:0;
+    width:100.4%;
+    margin-left:-1.2em;
+    border-left: 1px solid #d0d0d0;
+    border-right: 1px solid #d0d0d0;
 }
+
+#portal-footer a p {
+    border-bottom: 4px solid #cccccc;
+    margin-bottom: 1em;
+    
+}
+
+#portal-footer ul li a p  {
+    border-bottom: 0px solid #cccccc;
+    margin-bottom: 0.2em;
+    
+}
+
 #portal-footer p.inspringen {
     padding-left:1em;
     border-bottom:0 solid #eeeeee;
@@ -1331,8 +1394,10 @@ div.linkFooter ul li a:focus
     border-bottom: 1px solid #C0C0C0\9; 
     border-right: 1px solid #C0C0C0\9;
     border-left: 1px solid #C0C0C0\9;
-    width:100.05%\9;
+    width:100%\9;
 }
+
+
 
 #portal-colophon a{
      color: #666666 !important;
@@ -1424,7 +1489,7 @@ table, table td, table tr{
 /*******************admin*********************/
 #edit-bar, #content ul.formTabs {
     margin-right: 1em;
-    margin-top: 0.6em;
+    margin-top: 1.2em;
    
 }
  
@@ -1432,14 +1497,32 @@ dl.portalMessage dd {
    margin-right: 1em;
 }   
 
-
+img.image-left, img.image-right, .captioned img {
+    border: 0 solid #DDDDDD;
+}
 
 /* Add by bsuttor */
 .footer-column{
+        margin-right:1em;
 	width:20%;
 	float:left;
 }
 /* End add by bsuttor */
 
+.icons-on .contenttype-document, 
+.icons-on .contenttype-event, 
+.icons-on .contenttype-folder, 
+.icons-on .contenttype-link, 
+.icons-on .contenttype-news-item, 
+.icons-on .contenttype-plone-site, 
+.icons-on .contenttype-topic, 
+.icons-on #plone-contentmenu-factories 
+.contenttype-file, 
+.icons-on #plone-contentmenu-factories 
+.contenttype-image{
+    background:none !important;
+}
 
-
+.hiddenStructure{
+    margin: -0.1em 0 0 0.1em;
+}
