@@ -10,7 +10,6 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.LinguaPlone.browser.selector import TranslatableLanguageSelector
 from plonetheme.urbanisme.browser.interfaces import IThemeView
 from plone.app.layout.viewlets.common import SearchBoxViewlet as SearchBoxBase
-from plone.app.layout.viewlets.common import PathBarViewlet
 
 _marker = []
 
@@ -26,9 +25,6 @@ class LogoViewlet(ViewletBase):
 
 class LanguageSelector(TranslatableLanguageSelector):
     render = ViewPageTemplateFile('templates/languageselector.pt')
-
-class BreadcrumbViewlet(PathBarViewlet):
-    render = ViewPageTemplateFile('templates/breadcrumb.pt')
 
 class Quicklinks(ViewletBase):
     render = ViewPageTemplateFile('templates/quicklinks.pt')

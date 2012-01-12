@@ -51,17 +51,6 @@
       permission="zope2.View" 
       />
 
-   <!-- urbanisme breadcrumb -->
-   <browser:viewlet
-      name="urbanisme.breadcrumb"
-      for="*"
-      layer=".interfaces.IThemeSpecific"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-      template="templates/breadcrumb.pt"
-      class=".urbanismeview.BreadcrumbViewlet"
-      permission="zope2.Public"
-      />
-
     <!-- urbanisme languageselector -->
     <browser:viewlet  
       name="urbanisme.languageselector"
