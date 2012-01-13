@@ -139,14 +139,15 @@ div#text-60030491d943da910f1ba7aa955a1d09 img.image-left, div#text-2f088da7e1524
 }
 
 #portal-header { 
+    z-index: 1001;
 	background: #ffffff;
-        margin-left:-1em;
-        margin-left:-1em\9;
-        width:102.4%;
-        width:102.3%\9;
-        border-top: &px solid #C0C0C0\9; 
-        border-right: 1px solid #C0C0C0\9;
-        border-left: 1px solid #C0C0C0\9;
+	margin-left:-1em;
+    margin-left:-1em\9;
+	width:102.4%;
+	width:102.3%\9;
+	border-top: &px solid #C0C0C0\9; 
+	border-right: 1px solid #C0C0C0\9;
+	border-left: 1px solid #C0C0C0\9;
         
 	
 } 
