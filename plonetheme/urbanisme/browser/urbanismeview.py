@@ -33,7 +33,7 @@ class LogoViewlet(ViewletBase):
         else:
             src="%s/logo.jpg"  % self.site_url
             alt="Aménagement du teritoire & L'urbanisme en Région Bruxelles-Capitale"
-        if os.environ.get("DEPLOY_ENV") == "DEPLOY_ENV":
+        if os.environ.get("DEPLOY_ENV") == "staging":
             src="%s/logo_staging_%s.jpg" % (self.site_url, lang)
         return {"src":src, "alt":alt}
 
