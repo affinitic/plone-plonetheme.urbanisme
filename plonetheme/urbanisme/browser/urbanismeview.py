@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from zope.interface import implements
 from zope.component import getMultiAdapter
 
@@ -10,7 +11,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.LinguaPlone.browser.selector import TranslatableLanguageSelector
 from plonetheme.urbanisme.browser.interfaces import IThemeView
 from plone.app.layout.viewlets.common import SearchBoxViewlet as SearchBoxBase
-
+import os
 
 _marker = []
 
@@ -23,6 +24,18 @@ class LogoViewlet(ViewletBase):
             return []
         bound = self.tool.getLanguageBindings()
         current = bound[0]
+        
+    def logo(self):
+        lang = self.context.Language()
+        if lang == "nl":
+            src="%s/logo-nl.jpg" % self.site_url
+            alt="Ruimtelijke ordening & Stedenbouw in het Brussels Hoofdstdelijk Gewest"
+        else:
+            src="%s/logo.jpg"  % self.site_url
+            alt="Aménagement du teritoire & L'urbanisme en Région Bruxelles-Capitale"
+        if os.environ.get("DEPLOY_ENV") == "DEPLOY_ENV":
+            src="%s/logo_staging_%s.jpg" % (self.site_url, lang)
+        return {"src":src, "alt":alt}
 
 class LanguageSelector(TranslatableLanguageSelector):
     render = ViewPageTemplateFile('templates/languageselector.pt')

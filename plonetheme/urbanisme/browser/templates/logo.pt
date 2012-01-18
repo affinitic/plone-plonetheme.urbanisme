@@ -1,15 +1,6 @@
- <div id="portal-logo" tal:condition="python:request.LANGUAGE=='fr'">
-        <a accesskey="1" tal:attributes="href view/navigation_root_url" i18n:domain="plone">
-           <img src="logo.jpg"  alt="Aménagement du teritoire & L'urbanisme en Région Bruxelles-Capitale"  />
-        </a> 
-    </div>
-    <div id="portal-logo" tal:condition="python:request.LANGUAGE=='nl'">
-        <a accesskey="1" tal:attributes="href view/navigation_root_url" i18n:domain="urbanisme.site">
-           <img src="logo-nl.jpg"  alt="Ruimtelijke ordening & Stedenbouw in het Brussels Hoofdstdelijk Gewest"  />
-        </a> 
-    </div>
-    <div id="portal-logo" tal:condition="python:request.LANGUAGE==''">
-        <a accesskey="1" tal:attributes="href view/navigation_root_url" i18n:domain="urbanisme.site">
-           <img src="logo.jpg"  alt="Aménagement du teritoire & L'urbanisme en Région Bruxelles-Capitale"  />
-        </a> 
-    </div>
+<div id="portal-logo" >
+    <a accesskey="1" tal:attributes="href view/navigation_root_url" i18n:domain="plone" tal:define="img view/logo">
+        <img tal:attributes="src img/src; alt img/alt" />
+    </a> 
+</div>
+
