@@ -1503,10 +1503,17 @@ img.image-left, img.image-right, .captioned img {
 }
 
 /* Add by bsuttor */
-.footer-column{
-        margin-right:1em;
-	width:20%;
-	float:left;
+
+ul li.footer-column{
+	margin-right:1em;
+	width:19%;
+	float: left;
+}
+#portal-footer ul li.footer-column a p{
+	font-weight:bold;
+}
+#portal-footer ul li.footer-column ul li a p{
+	font-weight:normal;
 }
 /* End add by bsuttor */
 
