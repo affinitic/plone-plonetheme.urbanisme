@@ -375,19 +375,18 @@ ul.submenu, ul.navTreeLevel1 {
 margin-top:2em;
 }
 
-
 #portal-personaltools li a { color:#ffffff; }
 
 #portal-breadcrumbs { 
    
     background-color: #FFFFFF;
-    border-bottom:1px solid #ffffff;*/
+    border-bottom:1px solid #ffffff;
     /*border-left:1px solid #COCOCO\9; 
     border-right:1px solid #COCOCO\9; */
     margin-left:0em;
     margin-left:0.3em\9;
     margin-top:2em;
-    font-size:105%;
+    font-size:100%;
     padding-bottom:0.5em;
     padding-left:1.5em;
     padding-right:5em;
@@ -1000,6 +999,7 @@ dl.portlet{border: 1px solid #dddddd;}
     border-right: 0px solid #dddddd;
     
 }
+#content dd {margin:0;}
 
 dd.portletFooter{
    padding:0 !important;
