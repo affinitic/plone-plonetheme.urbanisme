@@ -203,7 +203,8 @@ a#portal-logo { margin:0; }
 #searchGadget {
     border: 1px solid #8CACBB;
     width: 10em;
-    font-size:150%;
+    font-size:135%;
+    padding:1px;
 }
 
 div.linkSerchBox{
@@ -226,9 +227,10 @@ div.linkSerchBox a:hover{
 
 #portal-searchbox {
     background-color:#efefef;
-    padding:1.2em 1.2em 1em;
+    padding:4px;
     border:2px solid #eaeaea;
     -moz-border-radius: 4px 4px 4px 4px;
+    margin-top:0;
     margin-right: 20px;
 }
 
@@ -238,8 +240,8 @@ div.linkSerchBox a:hover{
     color: Black;
     cursor: pointer;
     font-size: 130%;
-    margin-bottom: 1px !important;
-    padding: 1px 1px 1px 19px;
+    margin-bottom: 0;
+    padding: 1px 1px 0 19px;
     text-transform: none;
 }
 
@@ -409,7 +411,7 @@ margin-top:2em;
 #portal-languageselector {
      background: none repeat scroll 0 0 transparent;
     margin:0.5em 2em 0 1em;
-    font-size:105%;
+    font-size:100%;
     position:relative;
     top:0.5em;
     left:0.50em;
