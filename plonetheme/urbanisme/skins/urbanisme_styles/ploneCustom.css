@@ -1511,10 +1511,13 @@ ul li.footer-column{
 }
 #portal-footer ul li.footer-column a p{
 	font-weight:bold;
+	border-bottom: 4px solid #CCC;
 }
 #portal-footer ul li.footer-column ul li a p{
 	font-weight:normal;
+	border-bottom: Opx solid #CCC;
 }
+
 /* End add by bsuttor */
 
 .icons-on .contenttype-document, 
