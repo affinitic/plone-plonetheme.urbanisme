@@ -694,6 +694,7 @@ dl.portlet a:hover{
   
 }
 
+.collage-column dl.portlet a:link { font-size:100%; }
 
 /* CONTENT */
 /* ******************************************************************* */
@@ -1113,6 +1114,8 @@ table.listing td, .stx table td {
 .template-sitemap ul.navTreeLevel3 li a {
     font-size:110%;
 }
+
+.template-sitemap div#content { margin-left:0.75em; }
 
 
 /*documentactions*/
