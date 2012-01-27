@@ -19,7 +19,7 @@ h1 ,
      margin-bottom:0.5em; 
      font-size:160%;
      font-weight: normal; 
-     letter-spacing:1pt;
+     letter-spacing:1.2pt;
      line-height:125%;
      color:#000000;
 }
@@ -474,13 +474,12 @@ div.bodytt {
 
 
 /* -------------- navigation -------------- */
-.portlet-static-menu-principal ul li{
+.portlet-static-menu-principal ul li, .portlet-static-main-menu ul li {
     list-style-image: url("http://www.urbanisme.irisnet.be/bullet.gif");
     margin-left:1em;
 }
 
-.portlet-static-menu-principal ul ul li{
-
+.portlet-static-menu-principal ul ul li, .portlet-static-main-menu ul ul li {
     margin-left:2em;
 }
 
@@ -1184,7 +1183,7 @@ dl.searchResults dt {
 }
 
 #portal-footer ul li a p  {
-    border-bottom: 0px solid #cccccc;
+    border-bottom: 0 solid #cccccc;
     margin-bottom: 0.2em;
     
 }
@@ -1447,13 +1446,13 @@ table, table td, table tr{
 .boxgray {
   background:#7d7d7d;
 }
-.box a, .box50 a {
-  color:#ffffff;
+.box a, .box50 a, #content .box span.link-external a {
+  color:#ffffff !important;
   text-decoration:none;
 }
-.box a:hover {
-  color:#dddddd;
-  text-decoration:underline;
+.box a:hover, #content .box span.link-external a:hover {
+  color:#dddddd !important;
+
 }
 .boxgray a:hover {
   color:#000000;
