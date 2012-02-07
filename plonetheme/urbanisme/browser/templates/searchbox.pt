@@ -2,17 +2,23 @@
     <form name="searchform" action="search" tal:attributes="action string:${view/navigation_root_url}/search">
         <label for="searchGadget" class="hiddenStructure" i18n:translate="text_search">Search Site</label>
         <div class="LSBox">
-        	<input name="SearchableText" type="text" size="18" value="" title="Search Site" accesskey="4" i18n:attributes="title title_search_site;" tal:attributes="value request/SearchableText|nothing; id view/search_input_id" class="inputLabel" />
-        	<input tal:condition="python:request.LANGUAGE=='nl'" class="searchButton" type="submit" value="Zoeken" />
-                <input tal:condition="python:request.LANGUAGE=='fr'" class="searchButton" type="submit" value="Recherche" />
+        	<input name="SearchableText" type="text" size="18" value="" title="Search Site" accesskey="4"
+                i18n:attributes="title title_search_site;" 
+                tal:attributes="value request/SearchableText|nothing; id view/search_input_id" 
+                class="inputLabel" />
+        	
+            <input tal:condition="python:request.LANGUAGE=='nl'" class="searchButton" type="submit" value="Zoeken" />
+            <input tal:condition="python:request.LANGUAGE=='fr'" class="searchButton" type="submit" value="Recherche" />
                
         	<div class="LSResult" id="LSResult" style="">
 				<div class="LSShadow" id="LSShadow">
 					
 				</div>
 	       </div>
-              <!-- <div tal:condition="python:request.LANGUAGE=='fr'" class="linkSerchBox">voir aussi : <a href="" tal:attributes="href string:${view/portal_url}/fr/mots-cles">Mots clés</a></div>
-               <div tal:condition="python:request.LANGUAGE=='nl'" class="linkSerchBox">Zie ook : <a href="" tal:attributes="href string:${view/portal_url}/nl/sleutelwoorden">Sleutelwoorden</a></div>-->
         </div>
     </form>
+</div>
+<div tal:define="portal_url view/site_url" class="permisvergunningen">
+    <a href="" tal:attributes="href string:${portal_url}/fr/permis" tal:condition="python:request.LANGUAGE=='fr'"></a>
+    <a href="" tal:attributes="href string:${portal_url}/nl/vergunningen" tal:condition="python:request.LANGUAGE=='nl'"></a>
 </div>
