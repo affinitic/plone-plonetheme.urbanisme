@@ -19,6 +19,6 @@
     </form>
 </div>
 <div tal:define="portal_url view/site_url" class="permisvergunningen">
-    <a href="" tal:attributes="href string:${portal_url}/fr/permis" tal:condition="python:request.LANGUAGE=='fr'" class="permis"></a>
-    <a href="" tal:attributes="href string:${portal_url}/nl/vergunningen" tal:condition="python:request.LANGUAGE=='nl'" class="vergunningen"></a>
+    <a href="" tal:attributes="href string:${portal_url}/permis" tal:condition="python:request.LANGUAGE=='fr'" class="permis"></a>
+    <a href="" tal:attributes="href string:${portal_url}/vergunningen" tal:condition="python:request.LANGUAGE=='nl'" class="vergunningen"></a>
 </div>

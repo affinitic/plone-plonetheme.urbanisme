@@ -173,7 +173,7 @@ a#portal-logo { margin:0; }
 #portal-logo img { margin: 0em 0em 2em 2em; }
 
 #portal-siteactions{
-    padding-bottom: 1em;
+    padding-bottom: 5px;
     padding-right:1.8em;
     padding-top:0.5em;
     text-align:right;
@@ -244,6 +244,30 @@ div.linkSerchBox a:hover{
     padding: 1px 1px 0 19px;
     text-transform: none;
 }
+
+div.permisvergunningen {
+    position:absolute;
+    top:70px;
+    right:20px;
+    width:300px;
+    height:65px;
+    min-height:65px;
+    border:1px solid #CCC;
+}
+a.permis {
+    background:transparent url(banner-header-small-fr.gif) no-repeat 0 0;
+    display:block;
+    width:100%;
+    height:100%;
+}
+a.vergunningen {
+    background:transparent url(banner-header-small-nl.gif) no-repeat 0 0;
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+
 
 /* GLOBAL NAVIGATION (horizontal) */
 /* ******************************************************************* */
