@@ -1266,6 +1266,9 @@ div.linkFooter ul li a:focus
      text-decoration:underline;
      
 }
+li.footer-column ul li ul li a p {
+	border-bottom:0;
+}
 
 
 /* GRID SYSTEM */
