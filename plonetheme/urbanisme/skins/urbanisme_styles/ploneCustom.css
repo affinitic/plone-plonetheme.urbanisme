@@ -1275,9 +1275,7 @@ div.linkFooter ul li a:focus
      text-decoration:underline;
      
 }
-li.footer-column ul li ul li a p {
-	border-bottom:0;
-}
+
 
 
 /* GRID SYSTEM */
@@ -1576,4 +1574,8 @@ ul li.footer-column{
 
 .hiddenStructure{
     margin: -0.1em 0 0 0.1em;
+}
+
+li.footer-column ul li ul li a p {
+	border-bottom:0 !important;
 }
