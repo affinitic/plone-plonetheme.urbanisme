@@ -809,6 +809,9 @@ div.documentActions li a {
      font-size:78%;
     
 }
+#content-core {
+	margin-left:1em;	
+}
 /*
 
 div.listingBar a.listingPrevious { width:47%; float:left;  }
