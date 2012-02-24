@@ -870,6 +870,9 @@ div.listingBar a.listingNext { width:47%; float:right; }
 .listingBar a {
     text-decoration: none;
 }
+div.listingBar a:hover {
+	background-color:#ccc;
+}
 
 .listingBar-collection {
     background-color: #d5d5d5;
