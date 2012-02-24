@@ -1169,6 +1169,9 @@ input.searchPage {
     font-size: 130% !important;
 }
 
+dl.searchResults  {
+    margin: 2em;
+}
 
 dl.searchResults dt {
     font-size: 115%;
